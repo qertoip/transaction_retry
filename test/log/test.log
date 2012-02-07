@@ -1,0 +1,1455 @@
+# Logfile created on 2012-02-06 17:17:51 +0100 by logger.rb/31641
+D, [2012-02-06T17:17:51.070808 #27182] DEBUG -- :   [1m[36m (2.2ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-06T17:17:51.081449 #27182] DEBUG -- :   [1m[35m (2.9ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-06T17:17:51.116234 #27182] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:17:51.131369 #27182] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-06 17:17:51', 'is fun!', 0, '2012-02-06 17:17:51')
+D, [2012-02-06T17:17:51.132193 #27182] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:17:51.133945 #27182] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2012-02-06T17:17:51.134959 #27182] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:17:51.136077 #27182] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-06T17:17:51.136526 #27182] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:17:51.137348 #27182] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1
+D, [2012-02-06T17:17:51.138021 #27182] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2012-02-06T17:17:51.138237 #27182] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-06T17:17:51.139025 #27182] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-06 17:17:51', 'gives money!', 0, '2012-02-06 17:17:51')[0m
+D, [2012-02-06T17:17:51.143519 #27182] DEBUG -- :   [1m[35m (4.1ms)[0m  ROLLBACK
+D, [2012-02-06T17:17:51.145298 #27182] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:17:51.145877 #27182] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:17:51.146236 #27182] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-06T17:17:51.146354 #27182]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-06T17:17:51.146493 #27182] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-06T17:17:51.147913 #27182] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-06 17:17:51', 'is cool!', 0, '2012-02-06 17:17:51')[0m
+D, [2012-02-06T17:17:51.148720 #27182] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-06T17:17:51.149536 #27182] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:17:51.150329 #27182] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-06T17:17:51.151028 #27182] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:17:51.151637 #27182] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-06T17:17:51.152240 #27182] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-06T17:46:26.459354 #27483] DEBUG -- :   [1m[36m (2.8ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-06T17:46:26.471473 #27483] DEBUG -- :   [1m[35m (4.4ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-06T17:46:26.504866 #27483] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:46:26.520086 #27483] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-06 17:46:26', 'is fun!', 0, '2012-02-06 17:46:26')
+D, [2012-02-06T17:46:26.520852 #27483] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:46:26.522602 #27483] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2012-02-06T17:46:26.523861 #27483] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:46:26.526528 #27483] DEBUG -- :   [1m[35mQueuedJob Load (0.4ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-06T17:46:26.527023 #27483] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:46:26.527881 #27483] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1
+D, [2012-02-06T17:46:26.529700 #27483] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-06T17:46:26.530370 #27483] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:46:26.532078 #27483] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-06 17:46:26', 'gives money!', 0, '2012-02-06 17:46:26')[0m
+D, [2012-02-06T17:46:26.533637 #27483] DEBUG -- :   [1m[35m (1.3ms)[0m  ROLLBACK
+D, [2012-02-06T17:46:26.535578 #27483] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:46:26.536448 #27483] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:46:26.536647 #27483] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-06T17:46:26.537054 #27483]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-06T17:46:26.537198 #27483] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-06T17:46:26.538185 #27483] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-06 17:46:26', 'is cool!', 0, '2012-02-06 17:46:26')[0m
+D, [2012-02-06T17:46:26.538766 #27483] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-06T17:46:26.539677 #27483] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-06T17:46:26.540163 #27483] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-06T17:46:26.540400 #27483] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:46:26.540803 #27483] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-06T17:46:26.541444 #27483] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-06T17:46:28.130637 #27571] DEBUG -- :   [1m[36m (7.0ms)[0m  [1mCREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+D, [2012-02-06T17:46:28.156457 #27571] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:46:28.176939 #27571] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-06 17:46:28 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-06 17:46:28 +0100]]
+D, [2012-02-06T17:46:28.177298 #27571] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-06T17:46:28.178157 #27571] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-06T17:46:28.178425 #27571] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:46:28.178590 #27571] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-06T17:46:28.178654 #27571]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-06T17:46:28.178768 #27571] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-06T17:46:28.179723 #27571] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-06 17:46:28 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-06 17:46:28 +0100]]
+D, [2012-02-06T17:46:28.180214 #27571] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-06T17:46:28.180907 #27571] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-06T17:46:28.181823 #27571] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-06T17:46:28.182263 #27571] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-06T17:46:28.183266 #27571] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 2]]
+D, [2012-02-06T17:46:28.183945 #27571] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-06T17:46:28.184678 #27571] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:46:28.186301 #27571] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-06 17:46:28 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-06 17:46:28 +0100]]
+D, [2012-02-06T17:46:28.186839 #27571] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-06T17:46:28.187146 #27571] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-06T17:46:28.187908 #27571] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-06T17:46:28.188776 #27571] DEBUG -- :   [1m[36mQueuedJob Load (0.3ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-06T17:46:28.189290 #27571] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-06T17:46:28.189818 #27571] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 3]]
+D, [2012-02-06T17:46:28.190336 #27571] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-06T17:46:29.784473 #27658] DEBUG -- :   [1m[36m (1.1ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-06T17:46:29.787047 #27658] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-06T17:46:29.805751 #27658] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-06T17:46:29.805925 #27658] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-06T17:46:29.805983 #27658]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-06T17:46:29.806073 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-06T17:46:29.830206 #27658] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-06 17:46:29 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-06 17:46:29 +0100]]
+D, [2012-02-06T17:46:29.830399 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-06T17:46:29.830959 #27658] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-06T17:46:29.831757 #27658] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-06T17:46:29.832207 #27658] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-06T17:46:29.832947 #27658] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-06T17:46:29.833166 #27658] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-06T17:46:29.833516 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-06T17:46:29.834705 #27658] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-06 17:46:29 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-06 17:46:29 +0100]]
+D, [2012-02-06T17:46:29.834950 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-06T17:46:29.835792 #27658] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-06T17:46:29.836130 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-06T17:46:29.837096 #27658] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-06 17:46:29 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-06 17:46:29 +0100]]
+D, [2012-02-06T17:46:29.837501 #27658] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-06T17:46:29.837628 #27658] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-06T17:46:29.837919 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-06T17:46:29.838213 #27658] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-06T17:46:29.838425 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-06T17:46:29.838695 #27658] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 2]]
+D, [2012-02-06T17:46:29.838784 #27658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T09:33:19.878229 #11378] DEBUG -- :   [1m[36m (2.5ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T09:33:19.884372 #11378] DEBUG -- :   [1m[35m (3.2ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T09:33:19.920955 #11378] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:19.921518 #11378] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T09:33:19.921766 #11378]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:33:19.922136 #11378] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:19.946476 #11378] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:33:19', 'is cool!', 0, '2012-02-07 09:33:19')
+D, [2012-02-07T09:33:19.947479 #11378] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:33:19.949116 #11378] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T09:33:19.951486 #11378] DEBUG -- :   [1m[36mQueuedJob Load (0.3ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T09:33:19.952049 #11378] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:33:19.952737 #11378] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1[0m
+D, [2012-02-07T09:33:19.953367 #11378] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T09:33:19.953614 #11378] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:19.954397 #11378] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:33:19', 'is fun!', 0, '2012-02-07 09:33:19')
+D, [2012-02-07T09:33:19.954836 #11378] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:33:19.955401 #11378] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T09:33:19.955720 #11378] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:33:19.956046 #11378] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T09:33:19.956245 #11378] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:19.956507 #11378] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 2
+D, [2012-02-07T09:33:19.956806 #11378] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:33:19.956960 #11378] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:33:19.969743 #11378] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:33:19', 'gives money!', 0, '2012-02-07 09:33:19')[0m
+D, [2012-02-07T09:33:19.971444 #11378] DEBUG -- :   [1m[35m (1.4ms)[0m  ROLLBACK
+D, [2012-02-07T09:33:19.972616 #11378] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:33:21.578474 #11465] DEBUG -- :   [1m[36m (5.1ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T09:33:21.596408 #11465] DEBUG -- :   [1m[35m (10.3ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T09:33:21.631661 #11465] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:21.654923 #11465] DEBUG -- :   [1m[35mSQL (1.5ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 09:33:21 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 09:33:21 +0100]]
+D, [2012-02-07T09:33:21.655897 #11465] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T09:33:21.658185 #11465] DEBUG -- :   [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:33:21.658700 #11465] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:21.658932 #11465] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T09:33:21.659018 #11465]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:33:21.659158 #11465] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:21.660575 #11465] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 09:33:21 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 09:33:21 +0100]]
+D, [2012-02-07T09:33:21.661205 #11465] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:33:21.662052 #11465] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:33:21.663680 #11465] DEBUG -- :   [1m[36mQueuedJob Load (0.4ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T09:33:21.664322 #11465] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T09:33:21.665467 #11465] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 2]]
+D, [2012-02-07T09:33:21.665967 #11465] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T09:33:21.666275 #11465] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:21.667304 #11465] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 09:33:21 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 09:33:21 +0100]]
+D, [2012-02-07T09:33:21.668010 #11465] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:33:21.668496 #11465] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T09:33:21.669018 #11465] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:33:21.669555 #11465] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:33:21.669812 #11465] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:33:21.670223 #11465] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 3]]
+D, [2012-02-07T09:33:21.670624 #11465] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:33:23.292870 #11553] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T09:33:23.295476 #11553] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T09:33:23.313994 #11553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:33:23.337202 #11553] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:33:23 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 09:33:23 +0100]]
+D, [2012-02-07T09:33:23.338229 #11553] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:33:23.338449 #11553] DEBUG -- :   [1m[35m (0.1ms)[0m  commit transaction
+D, [2012-02-07T09:33:23.339210 #11553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:33:23.339997 #11553] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:33:23.340435 #11553] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:33:23.341146 #11553] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 1]]
+D, [2012-02-07T09:33:23.341355 #11553] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T09:33:23.341752 #11553] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T09:33:23.341966 #11553] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T09:33:23.342069 #11553]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:33:23.342190 #11553] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T09:33:23.343215 #11553] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 09:33:23 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 09:33:23 +0100]]
+D, [2012-02-07T09:33:23.343393 #11553] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T09:33:23.343803 #11553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:33:23.344204 #11553] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:33:23.344406 #11553] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:33:23.344682 #11553] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 2]]
+D, [2012-02-07T09:33:23.344786 #11553] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T09:33:23.344978 #11553] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T09:33:23.345638 #11553] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 09:33:23 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 09:33:23 +0100]]
+D, [2012-02-07T09:33:23.345847 #11553] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T09:33:23.346608 #11553] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:00.049543 #11731] DEBUG -- :   [1m[36m (2.2ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T09:45:00.055968 #11731] DEBUG -- :   [1m[35m (4.0ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T09:45:00.075730 #11731] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:00.090724 #11731] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:45:00', 'is fun!', 0, '2012-02-07 09:45:00')
+D, [2012-02-07T09:45:00.091506 #11731] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:45:00.093245 #11731] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2012-02-07T09:45:00.094172 #11731] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:45:00.095222 #11731] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T09:45:00.095670 #11731] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:00.096486 #11731] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1
+D, [2012-02-07T09:45:00.097176 #11731] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:00.097397 #11731] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:00.097546 #11731] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:00.097612 #11731]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:00.097757 #11731] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:00.097904 #11731] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:00.097956 #11731]  WARN -- : Transaction isolation conflict detected. Retrying for the 2-nd time...
+D, [2012-02-07T09:45:01.098547 #11731] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T09:45:01.099121 #11731] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T09:45:01.130530 #11731] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T09:45:01.132234 #11731] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:45:01', 'gives money!', 0, '2012-02-07 09:45:01')[0m
+D, [2012-02-07T09:45:01.133270 #11731] DEBUG -- :   [1m[35m (0.7ms)[0m  ROLLBACK
+D, [2012-02-07T09:45:01.134572 #11731] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:45:01.135023 #11731] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T09:45:01.135251 #11731] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:01.135351 #11731]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:01.135514 #11731] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:01.136768 #11731] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:45:01', 'is cool!', 0, '2012-02-07 09:45:01')[0m
+D, [2012-02-07T09:45:01.137506 #11731] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T09:45:01.138231 #11731] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:45:01.138933 #11731] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T09:45:01.139280 #11731] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:01.139935 #11731] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-07T09:45:01.140616 #11731] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:02.700334 #11823] DEBUG -- :   [1m[36m (4.5ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T09:45:02.719189 #11823] DEBUG -- :   [1m[35m (11.1ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T09:45:02.754908 #11823] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:02.775020 #11823] DEBUG -- :   [1m[35mSQL (1.5ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 09:45:02 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 09:45:02 +0100]]
+D, [2012-02-07T09:45:02.776134 #11823] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:02.777412 #11823] DEBUG -- :   [1m[35m (1.1ms)[0m  COMMIT
+D, [2012-02-07T09:45:02.778196 #11823] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:02.779216 #11823] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:45:02.779675 #11823] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:02.780519 #11823] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 1]]
+D, [2012-02-07T09:45:02.781898 #11823] DEBUG -- :   [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:02.782400 #11823] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T09:45:02.782637 #11823] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:02.782716 #11823]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:02.782868 #11823] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:02.783042 #11823] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:02.783101 #11823]  WARN -- : Transaction isolation conflict detected. Retrying for the 2-nd time...
+D, [2012-02-07T09:45:03.783730 #11823] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T09:45:03.784293 #11823] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T09:45:03.810591 #11823] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T09:45:03.810919 #11823] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:03.810992 #11823]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:03.811121 #11823] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:03.812589 #11823] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 09:45:03 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 09:45:03 +0100]]
+D, [2012-02-07T09:45:03.813398 #11823] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T09:45:03.815104 #11823] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:03.816356 #11823] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:45:03.817043 #11823] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:03.818194 #11823] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 2]]
+D, [2012-02-07T09:45:03.818846 #11823] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:03.819453 #11823] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T09:45:03.821491 #11823] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 09:45:03 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 09:45:03 +0100]]
+D, [2012-02-07T09:45:03.822222 #11823] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-07T09:45:03.824695 #11823] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:05.352721 #11914] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T09:45:05.355348 #11914] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T09:45:05.373888 #11914] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:05.374065 #11914] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T09:45:05.374139 #11914]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:05.374233 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:05.398256 #11914] DEBUG -- :   [1m[35mSQL (1.5ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:45:05 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 09:45:05 +0100]]
+D, [2012-02-07T09:45:05.398690 #11914] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T09:45:05.399428 #11914] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:45:05.400329 #11914] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T09:45:05.400967 #11914] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T09:45:05.402304 #11914] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T09:45:05.402544 #11914] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T09:45:05.402855 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:05.403904 #11914] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:45:05 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 09:45:05 +0100]]
+D, [2012-02-07T09:45:05.404124 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T09:45:05.405195 #11914] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:45:05.405482 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:05.406261 #11914] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:45:05 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 09:45:05 +0100]]
+D, [2012-02-07T09:45:05.406682 #11914] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:05.406805 #11914] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T09:45:05.407084 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:05.407426 #11914] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:45:05.407597 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:05.407847 #11914] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 2]]
+D, [2012-02-07T09:45:05.407944 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T09:45:05.408099 #11914] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T09:45:05.408226 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T09:45:05.408281 #11914]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:05.408368 #11914] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T09:45:05.408472 #11914] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T09:45:05.408516 #11914]  WARN -- : Transaction isolation conflict detected. Retrying for the 2-nd time...
+D, [2012-02-07T09:45:06.409061 #11914] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T09:45:06.409574 #11914] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T09:45:46.929581 #12013] DEBUG -- :   [1m[36m (1.9ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T09:45:46.935774 #12013] DEBUG -- :   [1m[35m (3.8ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T09:45:46.958676 #12013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:46.958860 #12013] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T09:45:46.958921 #12013]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:46.959017 #12013] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:46.974688 #12013] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:45:46', 'is cool!', 0, '2012-02-07 09:45:46')
+D, [2012-02-07T09:45:46.975709 #12013] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:46.976633 #12013] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T09:45:46.978632 #12013] DEBUG -- :   [1m[36mQueuedJob Load (0.4ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T09:45:46.979123 #12013] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:46.979965 #12013] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1[0m
+D, [2012-02-07T09:45:46.980698 #12013] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2012-02-07T09:45:46.980920 #12013] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:46.981070 #12013] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T09:45:46.981136 #12013]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:46.981237 #12013] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:46.981359 #12013] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T09:45:46.981570 #12013] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:46.998709 #12013] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:45:46', 'gives money!', 0, '2012-02-07 09:45:46')
+D, [2012-02-07T09:45:46.999622 #12013] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T09:45:47.001398 #12013] DEBUG -- :   [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T09:45:47.001871 #12013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:47.002949 #12013] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 09:45:47', 'is fun!', 0, '2012-02-07 09:45:47')
+D, [2012-02-07T09:45:47.003358 #12013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:45:47.003910 #12013] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T09:45:47.004209 #12013] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T09:45:47.004540 #12013] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T09:45:47.004746 #12013] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:47.005062 #12013] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-07T09:45:47.005349 #12013] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:48.605486 #12100] DEBUG -- :   [1m[36m (3.3ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T09:45:48.618119 #12100] DEBUG -- :   [1m[35m (9.3ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T09:45:48.654579 #12100] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:48.654806 #12100] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T09:45:48.654881 #12100]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:48.655099 #12100] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:48.655217 #12100] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T09:45:48.655443 #12100] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:48.676227 #12100] DEBUG -- :   [1m[35mSQL (0.8ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 09:45:48 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 09:45:48 +0100]]
+D, [2012-02-07T09:45:48.676596 #12100] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T09:45:48.677940 #12100] DEBUG -- :   [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:45:48.678283 #12100] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:48.679508 #12100] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 09:45:48 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 09:45:48 +0100]]
+D, [2012-02-07T09:45:48.680300 #12100] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:48.680840 #12100] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T09:45:48.681904 #12100] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:48.683072 #12100] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:45:48.683474 #12100] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:48.684211 #12100] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 2]]
+D, [2012-02-07T09:45:48.684595 #12100] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:48.684816 #12100] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:48.684982 #12100] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T09:45:48.685037 #12100]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:48.685138 #12100] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T09:45:48.686078 #12100] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 09:45:48 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 09:45:48 +0100]]
+D, [2012-02-07T09:45:48.686573 #12100] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T09:45:48.687207 #12100] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:48.687753 #12100] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:45:48.687925 #12100] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T09:45:48.688231 #12100] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 3]]
+D, [2012-02-07T09:45:48.688716 #12100] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T09:45:50.258103 #12187] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T09:45:50.260636 #12187] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T09:45:50.279101 #12187] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.279276 #12187] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T09:45:50.279334 #12187]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:50.279435 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.302727 #12187] DEBUG -- :   [1m[35mSQL (1.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:45:50 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 09:45:50 +0100]]
+D, [2012-02-07T09:45:50.303182 #12187] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T09:45:50.304273 #12187] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:45:50.305066 #12187] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T09:45:50.305542 #12187] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T09:45:50.306501 #12187] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T09:45:50.306792 #12187] DEBUG -- :   [1m[35m (0.1ms)[0m  commit transaction
+D, [2012-02-07T09:45:50.307185 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.307425 #12187] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T09:45:50.307515 #12187]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T09:45:50.307634 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.307764 #12187] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T09:45:50.308030 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.308844 #12187] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:45:50 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 09:45:50 +0100]]
+D, [2012-02-07T09:45:50.309071 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T09:45:50.309914 #12187] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T09:45:50.310196 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.310973 #12187] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 09:45:50 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 09:45:50 +0100]]
+D, [2012-02-07T09:45:50.311295 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:50.311401 #12187] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T09:45:50.311650 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T09:45:50.311970 #12187] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T09:45:50.312152 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T09:45:50.312418 #12187] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 2]]
+D, [2012-02-07T09:45:50.312513 #12187] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:08:54.212949 #12541] DEBUG -- :   [1m[36m (5.3ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:08:54.220313 #12541] DEBUG -- :   [1m[35m (4.9ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:08:54.248543 #12541] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:08:54.263436 #12541] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:08:54', 'is fun!', 0, '2012-02-07 10:08:54')
+D, [2012-02-07T10:08:54.264197 #12541] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:08:54.265991 #12541] DEBUG -- :   [1m[35m (0.9ms)[0m  COMMIT
+D, [2012-02-07T10:08:54.266952 #12541] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:08:54.268021 #12541] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:08:54.268462 #12541] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:08:54.269281 #12541] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1
+D, [2012-02-07T10:08:54.270017 #12541] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:08:54.270234 #12541] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:54.271017 #12541] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:08:54', 'gives money!', 0, '2012-02-07 10:08:54')[0m
+D, [2012-02-07T10:08:54.272141 #12541] DEBUG -- :   [1m[35m (0.6ms)[0m  ROLLBACK
+D, [2012-02-07T10:08:54.288759 #12541] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:08:54.289767 #12541] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:08:54.290141 #12541] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:08:54.290221 #12541]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:08:54.290330 #12541] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:54.290467 #12541] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:08:54.290777 #12541] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:54.290947 #12541] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:08:54.291221 #12541] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:54.291351 #12541] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:08:54.291401 #12541]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:08:54.291505 #12541] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:54.292448 #12541] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:08:54', 'is cool!', 0, '2012-02-07 10:08:54')[0m
+D, [2012-02-07T10:08:54.293061 #12541] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:08:54.293440 #12541] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:08:54.293774 #12541] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:08:54.293979 #12541] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:08:54.294352 #12541] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-07T10:08:54.294926 #12541] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:08:55.857249 #12628] DEBUG -- :   [1m[36m (4.7ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:08:55.877149 #12628] DEBUG -- :   [1m[35m (12.2ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:08:55.919632 #12628] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:08:55.948916 #12628] DEBUG -- :   [1m[35mSQL (1.6ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:08:55 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:08:55 +0100]]
+D, [2012-02-07T10:08:55.949939 #12628] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:55.950341 #12628] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:08:55.951088 #12628] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:55.953276 #12628] DEBUG -- :   [1m[35mQueuedJob Load (0.8ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:08:55.954241 #12628] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:08:55.955906 #12628] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 1]]
+D, [2012-02-07T10:08:55.956567 #12628] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:08:55.956773 #12628] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:55.957807 #12628] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:08:55 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:08:55 +0100]]
+D, [2012-02-07T10:08:55.958102 #12628] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-07T10:08:55.959004 #12628] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:55.959259 #12628] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:55.959414 #12628] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:08:55.959737 #12628] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:08:55.959931 #12628] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:08:55.960017 #12628]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:08:55.960155 #12628] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:55.960321 #12628] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:08:55.960577 #12628] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:55.960772 #12628] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:08:55.960842 #12628]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:08:55.960978 #12628] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:08:55.962025 #12628] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:08:55 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:08:55 +0100]]
+D, [2012-02-07T10:08:55.962425 #12628] DEBUG -- :   [1m[35m (0.2ms)[0m  COMMIT
+D, [2012-02-07T10:08:55.962874 #12628] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:55.963359 #12628] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:08:55.963620 #12628] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:08:55.964018 #12628] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 3]]
+D, [2012-02-07T10:08:55.964372 #12628] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:08:57.509345 #12715] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:08:57.512032 #12715] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:08:57.532279 #12715] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:08:57.532456 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:08:57.532514 #12715]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:08:57.532604 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:08:57.532720 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:08:57.532911 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:08:57.556941 #12715] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:08:57 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:08:57 +0100]]
+D, [2012-02-07T10:08:57.557793 #12715] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:57.557929 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:08:57.558501 #12715] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:57.559725 #12715] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:08:57.560946 #12715] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:08:57.561891 #12715] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 1]]
+D, [2012-02-07T10:08:57.562074 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:08:57.562412 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:08:57.562603 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:08:57.562869 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:08:57.563861 #12715] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:08:57 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:08:57 +0100]]
+D, [2012-02-07T10:08:57.564097 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:08:57.564784 #12715] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:57.565081 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:08:57.565228 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T10:08:57.565307 #12715]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:08:57.565413 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:08:57.566261 #12715] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:08:57 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:08:57 +0100]]
+D, [2012-02-07T10:08:57.566403 #12715] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:08:57.566680 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:08:57.566968 #12715] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:08:57.567121 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:08:57.567356 #12715] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 2]]
+D, [2012-02-07T10:08:57.567446 #12715] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:12:14.563018 #12837] DEBUG -- :   [1m[36m (3.1ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:12:14.574776 #12837] DEBUG -- :   [1m[35m (4.1ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:12:14.607047 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:14.622148 #12837] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:12:14', 'gives money!', 0, '2012-02-07 10:12:14')
+D, [2012-02-07T10:12:14.623249 #12837] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:12:14.624200 #12837] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:12:14.625263 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:14.626298 #12837] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:12:14', 'is fun!', 0, '2012-02-07 10:12:14')
+D, [2012-02-07T10:12:14.626939 #12837] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:12:14.627641 #12837] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2012-02-07T10:12:14.628421 #12837] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:12:14.629389 #12837] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:12:14.630425 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:14.632092 #12837] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 2
+D, [2012-02-07T10:12:14.651086 #12837] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:12:14.651537 #12837] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:12:14.651774 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:14.651843 #12837]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:14.651954 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:14.652821 #12837] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:12:14', 'is cool!', 0, '2012-02-07 10:12:14')[0m
+D, [2012-02-07T10:12:14.653486 #12837] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:12:14.654009 #12837] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:12:14.654350 #12837] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:12:14.654553 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:14.654831 #12837] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-07T10:12:14.655340 #12837] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:12:14.655507 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:14.655635 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:14.655682 #12837]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:14.655772 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:14.655881 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:12:14.656079 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:14.656182 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:14.656300 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:14.656397 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:14.656441 #12837]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:14.656528 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:14.656622 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:14.656738 #12837] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:14.656849 #12837] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:14.656903 #12837]  WARN -- : Transaction isolation conflict detected. Retrying for the 2-nd time...
+D, [2012-02-07T10:12:15.657498 #12837] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:12:15.658016 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:15.658504 #12837] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:15.658891 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:15.659069 #12837]  WARN -- : Transaction isolation conflict detected. Retrying for the 3-rd time...
+D, [2012-02-07T10:12:17.659760 #12837] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:12:17.660257 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:17.660758 #12837] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:17.661148 #12837] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:12:19.234320 #12924] DEBUG -- :   [1m[36m (7.0ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:12:19.252287 #12924] DEBUG -- :   [1m[35m (10.5ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:12:19.291811 #12924] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:19.314413 #12924] DEBUG -- :   [1m[35mSQL (1.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:12:19 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:12:19 +0100]]
+D, [2012-02-07T10:12:19.315449 #12924] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:12:19.316028 #12924] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T10:12:19.316933 #12924] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:12:19.318088 #12924] DEBUG -- :   [1m[35mQueuedJob Load (0.4ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:12:19.318558 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:19.319670 #12924] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 1]]
+D, [2012-02-07T10:12:19.320150 #12924] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:12:19.320417 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.321383 #12924] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:12:19 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:12:19 +0100]]
+D, [2012-02-07T10:12:19.321728 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-07T10:12:19.322687 #12924] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:12:19.323016 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.323189 #12924] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:19.323258 #12924]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:19.323382 #12924] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.324353 #12924] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:12:19 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:12:19 +0100]]
+D, [2012-02-07T10:12:19.324860 #12924] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:12:19.325339 #12924] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:12:19.325862 #12924] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:12:19.326120 #12924] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:12:19.326950 #12924] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 3]]
+D, [2012-02-07T10:12:19.327520 #12924] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:12:19.327953 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.328187 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:19.328255 #12924]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:19.328393 #12924] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.328568 #12924] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:12:19.328959 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.329195 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:19.329465 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:19.329625 #12924] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:19.329703 #12924]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:19.329829 #12924] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:12:19.329967 #12924] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:19.330239 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:19.330442 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:19.330503 #12924]  WARN -- : Transaction isolation conflict detected. Retrying for the 2-nd time...
+D, [2012-02-07T10:12:20.331151 #12924] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:12:20.331660 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:20.332186 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:20.332792 #12924] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:12:20.333015 #12924]  WARN -- : Transaction isolation conflict detected. Retrying for the 3-rd time...
+D, [2012-02-07T10:12:22.333715 #12924] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:12:22.334216 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:22.334740 #12924] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:12:22.335178 #12924] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:12:23.930409 #13012] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:12:23.932968 #13012] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:12:23.951452 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:23.951597 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:12:23.951730 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:23.951843 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:12:23.951889 #13012]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:23.951979 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:23.952067 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:12:23.952172 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:23.952273 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:12:23.952314 #13012]  WARN -- : Transaction isolation conflict detected. Retrying for the 2-nd time...
+D, [2012-02-07T10:12:24.952893 #13012] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:24.953329 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:12:24.953794 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:24.954155 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+W, [2012-02-07T10:12:24.954319 #13012]  WARN -- : Transaction isolation conflict detected. Retrying for the 3-rd time...
+D, [2012-02-07T10:12:26.954968 #13012] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.955401 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:12:26.955844 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:12:26.956201 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+D, [2012-02-07T10:12:26.956953 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.957350 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+W, [2012-02-07T10:12:26.957515 #13012]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:26.957882 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.958263 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+D, [2012-02-07T10:12:26.958814 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.959183 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+W, [2012-02-07T10:12:26.959341 #13012]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:12:26.959642 #13012] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.986998 #13012] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:12:26 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:12:26 +0100]]
+D, [2012-02-07T10:12:26.987196 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:12:26.987750 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:12:26.988494 #13012] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:12:26.988847 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:12:26.989333 #13012] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T10:12:26.989449 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:12:26.989639 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.990255 #13012] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:12:26 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:12:26 +0100]]
+D, [2012-02-07T10:12:26.990428 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:12:26.990932 #13012] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:12:26.991116 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.991660 #13012] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:12:26 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:12:26 +0100]]
+D, [2012-02-07T10:12:26.991929 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:12:26.992029 #13012] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:12:26.992248 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:12:26.992509 #13012] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:12:26.992655 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:12:26.992862 #13012] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 2]]
+D, [2012-02-07T10:12:26.992953 #13012] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:13:38.897600 #13113] DEBUG -- :   [1m[36m (2.1ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:13:38.903135 #13113] DEBUG -- :   [1m[35m (3.0ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:13:38.932164 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:38.947159 #13113] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:38', 'gives money!', 0, '2012-02-07 10:13:38')
+D, [2012-02-07T10:13:38.948472 #13113] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:38.950839 #13113] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:13:38.953988 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:38.955162 #13113] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:38', 'is fun!', 0, '2012-02-07 10:13:38')
+D, [2012-02-07T10:13:38.956630 #13113] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:13:38.957559 #13113] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2012-02-07T10:13:38.958868 #13113] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:13:38.962203 #13113] DEBUG -- :   [1m[35mQueuedJob Load (0.4ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:13:38.964068 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:38.979472 #13113] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 2
+D, [2012-02-07T10:13:38.980212 #13113] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:13:38.980434 #13113] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:38.980571 #13113] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:38.980627 #13113]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:38.980718 #13113] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:38.981515 #13113] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:38', 'is cool!', 0, '2012-02-07 10:13:38')[0m
+D, [2012-02-07T10:13:38.982168 #13113] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:13:38.982639 #13113] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:13:38.983156 #13113] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:13:38.983364 #13113] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:38.983794 #13113] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3
+D, [2012-02-07T10:13:38.985103 #13113] DEBUG -- :   [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:13:38.985629 #13113] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:13:38.986007 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:38.986142 #13113]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:38.986405 #13113] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:13:38.986728 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:38.987284 #13113] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:13:38.987583 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:38.987921 #13113] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:13:38.988198 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:38.988280 #13113]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:38.988384 #13113] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:38.988491 #13113] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:38.989855 #13113] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:38', 'is cool!', 0, '2012-02-07 10:13:38')
+D, [2012-02-07T10:13:38.990260 #13113] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:38.991922 #13113] DEBUG -- :   [1m[35m (1.5ms)[0m  COMMIT
+D, [2012-02-07T10:13:40.531571 #13200] DEBUG -- :   [1m[36m (4.8ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:13:40.550651 #13200] DEBUG -- :   [1m[35m (11.5ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:13:40.583227 #13200] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:40.583671 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:40.583897 #13200] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:40.584110 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T10:13:40.584171 #13200]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:40.584444 #13200] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:40.584554 #13200] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:40.607755 #13200] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:40 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:40 +0100]]
+D, [2012-02-07T10:13:40.608016 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+D, [2012-02-07T10:13:40.608388 #13200] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:13:40.608853 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:13:40.609776 #13200] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:40 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:13:40 +0100]]
+D, [2012-02-07T10:13:40.610282 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-07T10:13:40.611885 #13200] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:13:40.631329 #13200] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:13:40.632081 #13200] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:40.632343 #13200]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:40.632762 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:13:40.632939 #13200] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:40.633220 #13200] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:40.633390 #13200] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:40.633461 #13200]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:40.633585 #13200] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:40.636061 #13200] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:40 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:40 +0100]]
+D, [2012-02-07T10:13:40.636553 #13200] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:13:40.637129 #13200] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:13:40.637669 #13200] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:40.638328 #13200] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:40 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:13:40 +0100]]
+D, [2012-02-07T10:13:40.638719 #13200] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:40.639081 #13200] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:42.165840 #13291] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:13:42.168409 #13291] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:13:42.186900 #13291] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:42.187072 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:13:42.187130 #13291]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:42.187221 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:42.212782 #13291] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:13:42 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:42 +0100]]
+D, [2012-02-07T10:13:42.213008 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:13:42.213818 #13291] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:42.215726 #13291] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:13:42.216267 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:13:42.216920 #13291] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T10:13:42.217058 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:13:42.217340 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:42.217509 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:13:42.217572 #13291]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:42.217697 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:42.217806 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:13:42.218033 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:42.218162 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:42.218289 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:42.218385 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:13:42.218428 #13291]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:42.218512 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:42.218607 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:42.219510 #13291] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:13:42 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:42 +0100]]
+D, [2012-02-07T10:13:42.219684 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+D, [2012-02-07T10:13:42.219776 #13291] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:13:42.220040 #13291] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:13:42.220516 #13291] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:13:42 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:13:42 +0100]]
+D, [2012-02-07T10:13:42.220926 #13291] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:42.229025 #13291] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:13:42.230582 #13291] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T10:13:42.232226 #13291] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:13:42 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:13:42 +0100]]
+D, [2012-02-07T10:13:42.232599 #13291] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+D, [2012-02-07T10:13:42.233418 #13291] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:13:53.918675 #13439] DEBUG -- :   [1m[36m (4.7ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:13:53.924687 #13439] DEBUG -- :   [1m[35m (2.9ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:13:53.948011 #13439] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:53.963088 #13439] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:53', 'is fun!', 0, '2012-02-07 10:13:53')
+D, [2012-02-07T10:13:53.963857 #13439] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:13:53.965553 #13439] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2012-02-07T10:13:53.966468 #13439] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:13:53.967542 #13439] DEBUG -- :   [1m[35mQueuedJob Load (0.3ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:13:53.968000 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:53.968828 #13439] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1
+D, [2012-02-07T10:13:53.969525 #13439] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:13:53.969824 #13439] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:53.969949 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:53.970100 #13439] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:13:53.970236 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:53.970283 #13439]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:53.970391 #13439] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:53.970494 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:53.987429 #13439] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:53', 'is cool!', 0, '2012-02-07 10:13:53')
+D, [2012-02-07T10:13:53.987736 #13439] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:53.988459 #13439] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2012-02-07T10:13:53.989099 #13439] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:53.990385 #13439] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:53', 'gives money!', 0, '2012-02-07 10:13:53')
+D, [2012-02-07T10:13:53.991311 #13439] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:53.992381 #13439] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:13:53.999107 #13439] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:53.999318 #13439] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:13:53.999392 #13439]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:53.999499 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:53.999627 #13439] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:13:53.999831 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:53.999948 #13439] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:13:53.999996 #13439]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:54.000085 #13439] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:54.001130 #13439] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:13:54', 'is cool!', 0, '2012-02-07 10:13:54')
+D, [2012-02-07T10:13:54.001813 #13439] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:13:54.002513 #13439] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:13:55.541504 #13530] DEBUG -- :   [1m[36m (4.6ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:13:55.555335 #13530] DEBUG -- :   [1m[35m (9.7ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:13:55.592250 #13530] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:55.592506 #13530] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T10:13:55.592567 #13530]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:55.592665 #13530] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:55.592776 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:13:55.592987 #13530] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:55.616569 #13530] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:13:55 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:13:55 +0100]]
+D, [2012-02-07T10:13:55.616891 #13530] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:55.617976 #13530] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:55.618338 #13530] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:55.618473 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:55.618638 #13530] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:55.618773 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:13:55.618827 #13530]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:55.618938 #13530] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:13:55.619067 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:55.619926 #13530] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:55 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:55 +0100]]
+D, [2012-02-07T10:13:55.620108 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+D, [2012-02-07T10:13:55.620477 #13530] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:13:55.620966 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:55.621886 #13530] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:55 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:13:55 +0100]]
+D, [2012-02-07T10:13:55.622553 #13530] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:55.647882 #13530] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:13:55.649426 #13530] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:13:55.650052 #13530] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:13:55.650260 #13530]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:55.650379 #13530] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:13:55.653104 #13530] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:13:55 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:55 +0100]]
+D, [2012-02-07T10:13:55.654076 #13530] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:13:55.654971 #13530] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:13:57.196630 #13621] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:13:57.199211 #13621] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:13:57.217740 #13621] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:57.217912 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:13:57.217972 #13621]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:57.218066 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:57.243111 #13621] DEBUG -- :   [1m[35mSQL (1.4ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:13:57 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:57 +0100]]
+D, [2012-02-07T10:13:57.243462 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:13:57.244407 #13621] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:57.245203 #13621] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:13:57.245592 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:13:57.246147 #13621] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T10:13:57.246268 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:13:57.246460 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:57.246590 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:13:57.246646 #13621]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:57.246738 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:57.246841 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:13:57.247022 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:57.247117 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:57.247230 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:13:57.247321 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:13:57.247363 #13621]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:13:57.247448 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:13:57.247535 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:13:57.248176 #13621] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:13:57 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:13:57 +0100]]
+D, [2012-02-07T10:13:57.248314 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+D, [2012-02-07T10:13:57.248400 #13621] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:13:57.248600 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:13:57.249010 #13621] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:13:57 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:13:57 +0100]]
+D, [2012-02-07T10:13:57.249340 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:13:57.255537 #13621] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:13:57.256348 #13621] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:13:57.258094 #13621] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:13:57 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:13:57 +0100]]
+D, [2012-02-07T10:13:57.258774 #13621] DEBUG -- :   [1m[35m (0.1ms)[0m  rollback transaction
+D, [2012-02-07T10:13:57.260208 #13621] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:37.132862 #13726] DEBUG -- :   [1m[36m (1.9ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:15:37.143623 #13726] DEBUG -- :   [1m[35m (3.1ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:15:37.178658 #13726] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.178845 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:15:37.178905 #13726]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:15:37.179018 #13726] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.179128 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:15:37.187772 #13726] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:15:37.188009 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:15:37.194323 #13726] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:15:37', 'gives money!', 0, '2012-02-07 10:15:37')[0m
+D, [2012-02-07T10:15:37.195401 #13726] DEBUG -- :   [1m[35m (0.9ms)[0m  ROLLBACK
+D, [2012-02-07T10:15:37.196367 #13726] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:15:37.197984 #13726] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:15:37.198793 #13726] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.200514 #13726] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:15:37', 'is fun!', 0, '2012-02-07 10:15:37')
+D, [2012-02-07T10:15:37.200996 #13726] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:15:37.201522 #13726] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:15:37.203212 #13726] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:15:37.222171 #13726] DEBUG -- :   [1m[35mQueuedJob Load (0.6ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:15:37.223093 #13726] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.223778 #13726] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 2
+D, [2012-02-07T10:15:37.225235 #13726] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:15:37.225576 #13726] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:15:37.225818 #13726] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.225943 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:15:37.226090 #13726] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:15:37.226255 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  COMMIT
+D, [2012-02-07T10:15:37.226696 #13726] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:15:37.226964 #13726] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:15:37.227101 #13726] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.227232 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:15:37.227284 #13726]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:15:37.227390 #13726] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:37.228278 #13726] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:15:37', 'is cool!', 0, '2012-02-07 10:15:37')
+D, [2012-02-07T10:15:37.228987 #13726] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:15:37.229539 #13726] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:15:37.230080 #13726] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:15:37.230401 #13726] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:15:37.230835 #13726] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3[0m
+D, [2012-02-07T10:15:37.231465 #13726] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:15:37.231758 #13726] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:15:38.844115 #13813] DEBUG -- :   [1m[36m (4.5ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:15:38.856885 #13813] DEBUG -- :   [1m[35m (9.2ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:15:38.892457 #13813] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:38.892826 #13813] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T10:15:38.892913 #13813]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:15:38.893035 #13813] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:38.920206 #13813] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:15:38 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:15:38 +0100]]
+D, [2012-02-07T10:15:38.920708 #13813] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:15:38.921598 #13813] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:15:38.923914 #13813] DEBUG -- :   [1m[36mQueuedJob Load (0.3ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:15:38.925191 #13813] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:15:38.926981 #13813] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 1]]
+D, [2012-02-07T10:15:38.927258 #13813] DEBUG -- :   [1m[35m (0.2ms)[0m  COMMIT
+D, [2012-02-07T10:15:38.927568 #13813] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:15:38.927783 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:15:38.929155 #13813] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:15:38 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:15:38 +0100]]
+D, [2012-02-07T10:15:38.930011 #13813] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-07T10:15:38.931510 #13813] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:38.932087 #13813] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:15:38.932348 #13813] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:38.932498 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:15:38.932700 #13813] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:15:38.932955 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  COMMIT
+D, [2012-02-07T10:15:38.933357 #13813] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:38.933633 #13813] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:15:38.933807 #13813] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:38.933940 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:15:38.933989 #13813]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:15:38.934088 #13813] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:15:38.934198 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:15:38.934425 #13813] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:15:38.934552 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:15:38.935324 #13813] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:15:38 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:15:38 +0100]]
+D, [2012-02-07T10:15:38.935722 #13813] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:15:38.936093 #13813] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:15:38.936396 #13813] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:15:38.936771 #13813] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:15:38.936965 #13813] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:15:38.937325 #13813] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 3]]
+D, [2012-02-07T10:15:38.937675 #13813] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:15:38.937898 #13813] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:15:40.499242 #13900] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:15:40.501849 #13900] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:15:40.520596 #13900] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.520771 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:15:40.520830 #13900]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:15:40.520920 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.521026 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:15:40.538929 #13900] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:15:40.539157 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:15:40.545365 #13900] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:15:40 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:15:40 +0100]]
+D, [2012-02-07T10:15:40.545598 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:15:40.546204 #13900] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:40.546432 #13900] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:15:40.546593 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.546698 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:15:40.546827 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:15:40.546980 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:15:40.547253 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:40.547413 #13900] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:15:40.547539 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.548753 #13900] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:15:40 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:15:40 +0100]]
+D, [2012-02-07T10:15:40.549231 #13900] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:40.549379 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:15:40.550250 #13900] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:15:40.551495 #13900] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:15:40.552064 #13900] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.552766 #13900] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 1]]
+D, [2012-02-07T10:15:40.552908 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:15:40.553151 #13900] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:15:40.553308 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.553433 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:15:40.553491 #13900]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:15:40.553588 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:15:40.554388 #13900] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:15:40 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:15:40 +0100]]
+D, [2012-02-07T10:15:40.554555 #13900] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:15:40.554899 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:15:40.555196 #13900] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:15:40.555347 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:15:40.555538 #13900] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 2]]
+D, [2012-02-07T10:15:40.555623 #13900] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:15:40.555776 #13900] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:16:26.994121 #13997] DEBUG -- :   [1m[36m (2.7ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:16:27.004510 #13997] DEBUG -- :   [1m[35m (2.9ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:16:27.038376 #13997] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:27.053272 #13997] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:16:27', 'is fun!', 0, '2012-02-07 10:16:27')
+D, [2012-02-07T10:16:27.054051 #13997] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:16:27.055790 #13997] DEBUG -- :   [1m[35m (0.8ms)[0m  COMMIT
+D, [2012-02-07T10:16:27.056693 #13997] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:16:27.057764 #13997] DEBUG -- :   [1m[35mQueuedJob Load (0.4ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:16:27.058205 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:27.059047 #13997] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1
+D, [2012-02-07T10:16:27.059873 #13997] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:16:27.060297 #13997] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:16:27.060512 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:27.061538 #13997] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:16:27', 'gives money!', 0, '2012-02-07 10:16:27')
+D, [2012-02-07T10:16:27.063087 #13997] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:16:27.078763 #13997] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:16:27.079181 #13997] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:16:27.079409 #13997] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:16:27.079576 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:16:27.079644 #13997]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:16:27.079757 #13997] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:16:27.079889 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:16:27.080162 #13997] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:16:27.080307 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:27.080438 #13997] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:16:27.080489 #13997]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:16:27.080593 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:27.081428 #13997] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:16:27', 'is cool!', 0, '2012-02-07 10:16:27')
+D, [2012-02-07T10:16:27.082074 #13997] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:16:27.082494 #13997] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:16:27.082898 #13997] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:16:27.083130 #13997] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:16:27.083493 #13997] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3[0m
+D, [2012-02-07T10:16:27.083889 #13997] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:16:27.084151 #13997] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:16:27.084535 #13997] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:16:27.084694 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:16:27.084848 #13997] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:16:27.085020 #13997] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:16:27.085761 #13997] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:16:27.086044 #13997] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:16:28.770465 #14084] DEBUG -- :   [1m[36m (3.4ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:16:28.781718 #14084] DEBUG -- :   [1m[35m (8.8ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:16:28.809624 #14084] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:28.830922 #14084] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:16:28 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:16:28 +0100]]
+D, [2012-02-07T10:16:28.831320 #14084] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:16:28.834342 #14084] DEBUG -- :   [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:28.835763 #14084] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:16:28.837465 #14084] DEBUG -- :   [1m[35m (1.1ms)[0m  BEGIN
+D, [2012-02-07T10:16:28.837899 #14084] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:16:28.838003 #14084]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:16:28.838175 #14084] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:16:28.839604 #14084] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:16:28 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:16:28 +0100]]
+D, [2012-02-07T10:16:28.840229 #14084] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T10:16:28.841177 #14084] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:16:28.842405 #14084] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:16:28.843524 #14084] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:28.844595 #14084] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 2]]
+D, [2012-02-07T10:16:28.845045 #14084] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:16:28.845451 #14084] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:16:28.845710 #14084] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:28.845891 #14084] DEBUG -- :   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:16:28.846136 #14084] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:16:28.846407 #14084] DEBUG -- :   [1m[35m (0.0ms)[0m  COMMIT
+D, [2012-02-07T10:16:28.846965 #14084] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:16:28.847310 #14084] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:16:28.847520 #14084] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:28.847714 #14084] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:16:28.847790 #14084]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:16:28.847958 #14084] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:16:28.848136 #14084] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:16:28.848467 #14084] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:16:28.848677 #14084] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:16:28.849771 #14084] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:16:28 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:16:28 +0100]]
+D, [2012-02-07T10:16:28.850295 #14084] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:28.850585 #14084] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:16:28.850911 #14084] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:28.851292 #14084] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:16:28.851723 #14084] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:16:28.852166 #14084] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 3]]
+D, [2012-02-07T10:16:28.852639 #14084] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:16:28.853076 #14084] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:16:30.462219 #14171] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:16:30.464763 #14171] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:16:30.483606 #14171] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:16:30.483788 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:16:30.483846 #14171]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:16:30.483937 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:16:30.506957 #14171] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:16:30 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:16:30 +0100]]
+D, [2012-02-07T10:16:30.507447 #14171] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:16:30.508662 #14171] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:30.509471 #14171] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:16:30.509957 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:16:30.510633 #14171] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T10:16:30.510916 #14171] DEBUG -- :   [1m[35m (0.1ms)[0m  commit transaction
+D, [2012-02-07T10:16:30.511350 #14171] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:16:30.511697 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:16:30.511938 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T10:16:30.512040 #14171]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:16:30.512158 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:16:30.512296 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:16:30.512688 #14171] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:16:30.512833 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:16:30.512946 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:16:30.513076 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:16:30.513230 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:16:30.513727 #14171] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:16:30.513957 #14171] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:16:30.514109 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:16:30.515137 #14171] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:16:30 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:16:30 +0100]]
+D, [2012-02-07T10:16:30.515399 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:16:30.516102 #14171] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:30.516354 #14171] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:16:30.516502 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:16:30.517114 #14171] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:16:30 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:16:30 +0100]]
+D, [2012-02-07T10:16:30.517387 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:30.517488 #14171] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:16:30.517725 #14171] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:16:30.518008 #14171] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:16:30.518151 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:16:30.518360 #14171] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 2]]
+D, [2012-02-07T10:16:30.518448 #14171] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:16:30.518597 #14171] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:27:27.532186 #14376] DEBUG -- :   [1m[36m (1.7ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:27:27.537871 #14376] DEBUG -- :   [1m[35m (3.4ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:27:27.559178 #14376] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:27.559359 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:27:27.559420 #14376]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:27:27.559515 #14376] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:27.574453 #14376] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:27:27', 'is cool!', 0, '2012-02-07 10:27:27')
+D, [2012-02-07T10:27:27.576664 #14376] DEBUG -- :   [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:27:27.577579 #14376] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:27:27.580272 #14376] DEBUG -- :   [1m[36mQueuedJob Load (0.6ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:27:27.581198 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:27:27.582059 #14376] DEBUG -- :   [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1[0m
+D, [2012-02-07T10:27:27.582757 #14376] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2012-02-07T10:27:27.583055 #14376] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:27:27.583209 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:27:27.583320 #14376] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:27:27.583458 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:27:27.583634 #14376] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:27:27.597898 #14376] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:27:27.598402 #14376] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:27:27.598610 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:27:27.599386 #14376] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:27:27', 'is fun!', 0, '2012-02-07 10:27:27')[0m
+D, [2012-02-07T10:27:27.599925 #14376] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:27:27.600804 #14376] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:27:27.601686 #14376] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:27:27.602405 #14376] DEBUG -- :   [1m[36mQueuedJob Load (0.2ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:27:27.602794 #14376] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:27:27.603460 #14376] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 2[0m
+D, [2012-02-07T10:27:27.604084 #14376] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:27:27.604363 #14376] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:27:27.604502 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:27:27.604633 #14376] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:27:27.604682 #14376]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:27:27.604774 #14376] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:27:27.604883 #14376] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:27:27.605147 #14376] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:27:27.605282 #14376] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:27.605955 #14376] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:27:27', 'gives money!', 0, '2012-02-07 10:27:27')
+D, [2012-02-07T10:27:27.606760 #14376] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:27:27.607628 #14376] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:27:27.607948 #14376] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:27:29.174860 #14463] DEBUG -- :   [1m[36m (2.0ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:27:29.182885 #14463] DEBUG -- :   [1m[35m (4.6ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:27:29.202316 #14463] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:29.202516 #14463] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:27:29.202707 #14463] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:27:29.202916 #14463] DEBUG -- :   [1m[35m (0.0ms)[0m  COMMIT
+D, [2012-02-07T10:27:29.222142 #14463] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:27:29.222858 #14463] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:27:29.223115 #14463] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:29.228891 #14463] DEBUG -- :   [1m[35mSQL (0.8ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:27:29 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:27:29 +0100]]
+D, [2012-02-07T10:27:29.229222 #14463] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:27:29.230024 #14463] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:27:29.230360 #14463] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:27:29.230567 #14463] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:27:29.231352 #14463] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:27:29 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:27:29 +0100]]
+D, [2012-02-07T10:27:29.231777 #14463] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:27:29.232248 #14463] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:27:29.233305 #14463] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:27:29.235142 #14463] DEBUG -- :   [1m[36mQueuedJob Load (0.3ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:27:29.236601 #14463] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2012-02-07T10:27:29.237718 #14463] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 2]]
+D, [2012-02-07T10:27:29.238547 #14463] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T10:27:29.239412 #14463] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:27:29.239964 #14463] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:27:29.240474 #14463] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:27:29.240709 #14463]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:27:29.241066 #14463] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:27:29.241484 #14463] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:27:29.242306 #14463] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:27:29.242786 #14463] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:29.243207 #14463] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T10:27:29.243367 #14463]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:27:29.243702 #14463] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:27:29.245883 #14463] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:27:29 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:27:29 +0100]]
+D, [2012-02-07T10:27:29.247161 #14463] DEBUG -- :   [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:27:29.248588 #14463] DEBUG -- :   [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:27:29.249450 #14463] DEBUG -- :   [1m[36mQueuedJob Load (0.4ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:27:29.249696 #14463] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:27:29.250131 #14463] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 3]]
+D, [2012-02-07T10:27:29.250641 #14463] DEBUG -- :   [1m[35m (0.3ms)[0m  COMMIT
+D, [2012-02-07T10:27:29.251080 #14463] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:27:30.799006 #14550] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:27:30.801676 #14550] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:27:30.820193 #14550] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:27:30.843315 #14550] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:27:30 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:27:30 +0100]]
+D, [2012-02-07T10:27:30.844345 #14550] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:27:30.844569 #14550] DEBUG -- :   [1m[35m (0.1ms)[0m  commit transaction
+D, [2012-02-07T10:27:30.845293 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:27:30.846085 #14550] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:27:30.846532 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:27:30.847235 #14550] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 1]]
+D, [2012-02-07T10:27:30.847465 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:27:30.847831 #14550] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:27:30.848108 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:27:30.848370 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:27:30.848458 #14550]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:27:30.848572 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:27:30.848705 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:27:30.849017 #14550] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:27:30.849152 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:27:30.850146 #14550] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:27:30 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:27:30 +0100]]
+D, [2012-02-07T10:27:30.850407 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:27:30.851322 #14550] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:27:30.851587 #14550] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:27:30.851779 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:27:30.851936 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:27:30.852003 #14550]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:27:30.852101 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:27:30.852834 #14550] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:27:30 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:27:30 +0100]]
+D, [2012-02-07T10:27:30.852968 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:27:30.853227 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:27:30.853522 #14550] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:27:30.853699 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:27:30.853920 #14550] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 2]]
+D, [2012-02-07T10:27:30.854006 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:27:30.854155 #14550] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:27:30.854273 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:27:30.854370 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:27:30.854486 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:27:30.854622 #14550] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:27:30.854835 #14550] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:27:30.854979 #14550] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:30:17.440811 #14658] DEBUG -- :   [1m[36m (2.9ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:30:17.451764 #14658] DEBUG -- :   [1m[35m (3.4ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:30:17.487210 #14658] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:17.487393 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:30:17.487453 #14658]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:30:17.487564 #14658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:17.502575 #14658] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:30:17', 'is cool!', 0, '2012-02-07 10:30:17')
+D, [2012-02-07T10:30:17.503579 #14658] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:30:17.504478 #14658] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:30:17.506427 #14658] DEBUG -- :   [1m[36mQueuedJob Load (0.4ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:30:17.506881 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:17.507711 #14658] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1[0m
+D, [2012-02-07T10:30:17.508426 #14658] DEBUG -- :   [1m[35m (0.6ms)[0m  COMMIT
+D, [2012-02-07T10:30:17.508769 #14658] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:30:17.508932 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:17.509685 #14658] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:30:17', 'gives money!', 0, '2012-02-07 10:30:17')[0m
+D, [2012-02-07T10:30:17.510562 #14658] DEBUG -- :   [1m[35m (0.6ms)[0m  ROLLBACK
+D, [2012-02-07T10:30:17.527479 #14658] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:30:17.527953 #14658] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:30:17.528228 #14658] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:17.528384 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:30:17.528599 #14658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:30:17.528867 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  COMMIT
+D, [2012-02-07T10:30:17.529200 #14658] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:30:17.529443 #14658] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:30:17.529615 #14658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:17.529791 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:30:17.529853 #14658]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:30:17.529974 #14658] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:17.530111 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:30:17.530357 #14658] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:30:17.530501 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:17.531329 #14658] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:30:17', 'is fun!', 0, '2012-02-07 10:30:17')[0m
+D, [2012-02-07T10:30:17.531655 #14658] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:30:17.533028 #14658] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:30:17.533315 #14658] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:30:17.533632 #14658] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:30:17.533852 #14658] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:17.534153 #14658] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 3[0m
+D, [2012-02-07T10:30:17.534654 #14658] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T10:30:17.534834 #14658] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:30:19.105269 #14745] DEBUG -- :   [1m[36m (4.7ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:30:19.124255 #14745] DEBUG -- :   [1m[35m (11.3ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:30:19.161493 #14745] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:19.161868 #14745] DEBUG -- :   [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:30:19.162097 #14745] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:30:19.162421 #14745] DEBUG -- :   [1m[35m (0.1ms)[0m  COMMIT
+D, [2012-02-07T10:30:19.176079 #14745] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:30:19.177052 #14745] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:30:19.177748 #14745] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:19.185136 #14745] DEBUG -- :   [1m[35mSQL (1.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:30:19 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:30:19 +0100]]
+D, [2012-02-07T10:30:19.186515 #14745] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:30:19.187313 #14745] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:30:19.189125 #14745] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:30:19.190471 #14745] DEBUG -- :   [1m[35mQueuedJob Load (0.2ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:30:19.190901 #14745] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:19.191649 #14745] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1  [["id", 1]]
+D, [2012-02-07T10:30:19.192029 #14745] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:30:19.192306 #14745] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:30:19.192530 #14745] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:19.193432 #14745] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:30:19 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:30:19 +0100]]
+D, [2012-02-07T10:30:19.193698 #14745] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:30:19.194398 #14745] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:19.194698 #14745] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:30:19.194877 #14745] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:19.195010 #14745] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:30:19.195072 #14745]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:30:19.195162 #14745] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:19.195273 #14745] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:30:19.195542 #14745] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:30:19.195673 #14745] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:19.195787 #14745] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:30:19.195830 #14745]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:30:19.195916 #14745] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:30:19.196644 #14745] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:30:19 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:30:19 +0100]]
+D, [2012-02-07T10:30:19.197070 #14745] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:30:19.197458 #14745] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:19.197846 #14745] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:30:19.198004 #14745] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:30:19.198300 #14745] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 3]]
+D, [2012-02-07T10:30:19.198615 #14745] DEBUG -- :   [1m[35m (0.2ms)[0m  COMMIT
+D, [2012-02-07T10:30:19.198841 #14745] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:30:20.775365 #14832] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:30:20.777915 #14832] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:30:20.796530 #14832] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:30:20.819674 #14832] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:30:20 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:30:20 +0100]]
+D, [2012-02-07T10:30:20.820174 #14832] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:30:20.821500 #14832] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:20.821743 #14832] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:30:20.821907 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:30:20.822013 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:30:20.822137 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:30:20.822294 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:30:20.822551 #14832] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:20.822717 #14832] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:30:20.822841 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:30:20.824014 #14832] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:30:20 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:30:20 +0100]]
+D, [2012-02-07T10:30:20.824509 #14832] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:20.824663 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:30:20.825523 #14832] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:20.826877 #14832] DEBUG -- :   [1m[36mQueuedJob Load (0.2ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:30:20.827478 #14832] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T10:30:20.828205 #14832] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 1]]
+D, [2012-02-07T10:30:20.828345 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:30:20.828621 #14832] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:30:20.828788 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:30:20.828937 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T10:30:20.828994 #14832]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:30:20.829080 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:30:20.829182 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:30:20.829387 #14832] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:30:20.829512 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:30:20.829614 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:30:20.829666 #14832]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:30:20.829752 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:30:20.830444 #14832] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:30:20 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:30:20 +0100]]
+D, [2012-02-07T10:30:20.830583 #14832] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:30:20.830886 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:30:20.831166 #14832] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:30:20.831318 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:30:20.831506 #14832] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 2]]
+D, [2012-02-07T10:30:20.831587 #14832] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:30:20.831733 #14832] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:41.006034 #15596] DEBUG -- :   [1m[36m (1.8ms)[0m  [1mDROP TABLE `queued_jobs`[0m
+D, [2012-02-07T10:54:41.010540 #15596] DEBUG -- :   [1m[35m (1.9ms)[0m  CREATE TABLE `queued_jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `job` text NOT NULL, `status` int(11) DEFAULT 0 NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+D, [2012-02-07T10:54:41.030823 #15596] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:41.031012 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:54:41.031072 #15596]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:54:41.031179 #15596] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:41.031304 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:54:41.040977 #15596] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:54:41.041262 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:41.047448 #15596] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:54:41', 'is fun!', 0, '2012-02-07 10:54:41')[0m
+D, [2012-02-07T10:54:41.048019 #15596] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:54:41.050325 #15596] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:54:41.051094 #15596] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:54:41.052038 #15596] DEBUG -- :   [1m[36mQueuedJob Load (0.2ms)[0m  [1mSELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1[0m
+D, [2012-02-07T10:54:41.052562 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:41.053314 #15596] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 1[0m
+D, [2012-02-07T10:54:41.054116 #15596] DEBUG -- :   [1m[35m (0.4ms)[0m  COMMIT
+D, [2012-02-07T10:54:41.055010 #15596] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:54:41.055394 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:41.072047 #15596] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+W, [2012-02-07T10:54:41.072379 #15596]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:54:41.072638 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:41.074334 #15596] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:54:41', 'is cool!', 0, '2012-02-07 10:54:41')[0m
+D, [2012-02-07T10:54:41.075119 #15596] DEBUG -- :   [1m[35m (0.5ms)[0m  COMMIT
+D, [2012-02-07T10:54:41.076222 #15596] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `queued_jobs` [0m
+D, [2012-02-07T10:54:41.076610 #15596] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT `queued_jobs`.* FROM `queued_jobs` LIMIT 1
+D, [2012-02-07T10:54:41.076837 #15596] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:41.077146 #15596] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs` WHERE `queued_jobs`.`id` = 2
+D, [2012-02-07T10:54:41.077372 #15596] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:54:41.077597 #15596] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM `queued_jobs`
+D, [2012-02-07T10:54:41.077841 #15596] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:41.078411 #15596] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  INSERT INTO `queued_jobs` (`created_at`, `job`, `status`, `updated_at`) VALUES ('2012-02-07 10:54:41', 'gives money!', 0, '2012-02-07 10:54:41')
+D, [2012-02-07T10:54:41.078924 #15596] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+D, [2012-02-07T10:54:41.079714 #15596] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:54:41.080007 #15596] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:54:41.080224 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:41.080373 #15596] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:54:41.080525 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:54:41.080698 #15596] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:54:41.080973 #15596] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM `queued_jobs` 
+D, [2012-02-07T10:54:41.081262 #15596] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM `queued_jobs`[0m
+D, [2012-02-07T10:54:42.704967 #15683] DEBUG -- :   [1m[36m (2.6ms)[0m  [1mDROP TABLE "queued_jobs"[0m
+D, [2012-02-07T10:54:42.712497 #15683] DEBUG -- :   [1m[35m (5.0ms)[0m  CREATE TABLE "queued_jobs" ("id" serial primary key, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+D, [2012-02-07T10:54:42.736292 #15683] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:42.736663 #15683] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+W, [2012-02-07T10:54:42.736807 #15683]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:54:42.737022 #15683] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:42.760121 #15683] DEBUG -- :   [1m[35mSQL (1.7ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", 2012-02-07 10:54:42 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:54:42 +0100]]
+D, [2012-02-07T10:54:42.761985 #15683] DEBUG -- :   [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:54:42.763126 #15683] DEBUG -- :   [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:42.764280 #15683] DEBUG -- :   [1m[36mQueuedJob Load (0.3ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:54:42.764847 #15683] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
+D, [2012-02-07T10:54:42.766050 #15683] DEBUG -- :   [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 1]]
+D, [2012-02-07T10:54:42.766469 #15683] DEBUG -- :   [1m[35m (0.2ms)[0m  COMMIT
+D, [2012-02-07T10:54:42.766882 #15683] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:42.767120 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:42.767261 #15683] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+D, [2012-02-07T10:54:42.767427 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+D, [2012-02-07T10:54:42.767626 #15683] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:54:42.768119 #15683] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:42.768400 #15683] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:42.768609 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:42.769584 #15683] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:54:42 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:54:42 +0100]]
+D, [2012-02-07T10:54:42.769925 #15683] DEBUG -- :   [1m[35m (0.1ms)[0m  ROLLBACK
+D, [2012-02-07T10:54:42.770884 #15683] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:54:42.771230 #15683] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:54:42.771462 #15683] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:42.771615 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+W, [2012-02-07T10:54:42.771675 #15683]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:54:42.771787 #15683] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+D, [2012-02-07T10:54:42.771908 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  ROLLBACK
+D, [2012-02-07T10:54:42.772248 #15683] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:42.772450 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:42.773345 #15683] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2012-02-07 10:54:42 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:54:42 +0100]]
+D, [2012-02-07T10:54:42.773866 #15683] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:42.774159 #15683] DEBUG -- :   [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+D, [2012-02-07T10:54:42.774586 #15683] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:42.775015 #15683] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:54:42.775211 #15683] DEBUG -- :   [1m[35m (0.0ms)[0m  BEGIN
+D, [2012-02-07T10:54:42.775553 #15683] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = $1[0m  [["id", 3]]
+D, [2012-02-07T10:54:42.775827 #15683] DEBUG -- :   [1m[35m (0.2ms)[0m  COMMIT
+D, [2012-02-07T10:54:42.776116 #15683] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:44.414661 #15784] DEBUG -- :   [1m[36m (0.8ms)[0m  [1mselect sqlite_version(*)[0m
+D, [2012-02-07T10:54:44.417770 #15784] DEBUG -- :   [1m[35m (0.3ms)[0m  CREATE TABLE "queued_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "job" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+D, [2012-02-07T10:54:44.449390 #15784] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:54:44.449604 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+W, [2012-02-07T10:54:44.449686 #15784]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:54:44.449786 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:54:44.449893 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  rollback transaction
+D, [2012-02-07T10:54:44.473848 #15784] DEBUG -- :   [1m[36mSQL (3.2ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:44.475355 #15784] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T10:54:44.475536 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+W, [2012-02-07T10:54:44.475603 #15784]  WARN -- : Transaction isolation conflict detected. Retrying for the 1-st time...
+D, [2012-02-07T10:54:44.475696 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:54:44.485913 #15784] DEBUG -- :   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:54:44 +0100], ["job", "is cool!"], ["status", 0], ["updated_at", 2012-02-07 10:54:44 +0100]]
+D, [2012-02-07T10:54:44.486116 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:54:44.486746 #15784] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:54:44.487590 #15784] DEBUG -- :   [1m[35mQueuedJob Load (0.1ms)[0m  SELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1
+D, [2012-02-07T10:54:44.487991 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:54:44.488547 #15784] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  DELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?  [["id", 1]]
+D, [2012-02-07T10:54:44.488669 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:54:44.488888 #15784] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:54:44.489097 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:54:44.489200 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+D, [2012-02-07T10:54:44.489328 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+D, [2012-02-07T10:54:44.489476 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:54:44.490371 #15784] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "queued_jobs" [0m
+D, [2012-02-07T10:54:44.490574 #15784] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  DELETE FROM "queued_jobs"
+D, [2012-02-07T10:54:44.490784 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2012-02-07T10:54:44.494106 #15784] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  INSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", 2012-02-07 10:54:44 +0100], ["job", "gives money!"], ["status", 0], ["updated_at", 2012-02-07 10:54:44 +0100]]
+D, [2012-02-07T10:54:44.494905 #15784] DEBUG -- :   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+D, [2012-02-07T10:54:44.496290 #15784] DEBUG -- :   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:44.496725 #15784] DEBUG -- :   [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "queued_jobs"[0m
+D, [2012-02-07T10:54:44.497110 #15784] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2012-02-07T10:54:44.498420 #15784] DEBUG -- :   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "queued_jobs" ("created_at", "job", "status", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", 2012-02-07 10:54:44 +0100], ["job", "is fun!"], ["status", 0], ["updated_at", 2012-02-07 10:54:44 +0100]]
+D, [2012-02-07T10:54:44.498979 #15784] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:44.499089 #15784] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+D, [2012-02-07T10:54:44.499317 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "queued_jobs" 
+D, [2012-02-07T10:54:44.499627 #15784] DEBUG -- :   [1m[36mQueuedJob Load (0.1ms)[0m  [1mSELECT "queued_jobs".* FROM "queued_jobs" LIMIT 1[0m
+D, [2012-02-07T10:54:44.499789 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2012-02-07T10:54:44.500025 #15784] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs" WHERE "queued_jobs"."id" = ?[0m  [["id", 2]]
+D, [2012-02-07T10:54:44.500115 #15784] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+D, [2012-02-07T10:54:44.500280 #15784] DEBUG -- :   [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "queued_jobs"[0m
