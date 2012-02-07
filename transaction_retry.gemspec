@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["qertoip@gmail.com"]
   s.homepage    = "https://github.com/qertoip/transaction_retry"
   s.summary     = %q{Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL and SQLite.}
-  s.description = %q{Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL and SQLite databases through mysql2, pg and sqlite3 adapters.}
+  s.description = %q{Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL and SQLite (as long as you are using new drivers mysql2, pg, sqlite3).}
   s.required_ruby_version = '>= 1.9.2'
   
   s.files         = `git ls-files`.split("\n")

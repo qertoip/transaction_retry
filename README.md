@@ -1,6 +1,6 @@
 # transaction_retry
 
-Retries database transaction on deadlock and transaction serialization errors.
+Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL, and SQLite.
 
 ## Example
 
@@ -33,7 +33,7 @@ You can optionally configure transaction_retry gem in your config/initializers/t
 
 ## Features
 
- * Supports MySQL, PostgreSQL, and SQLite (as long as you are using new drivers mysql2, pg, sqlite3)
+ * Supports MySQL, PostgreSQL, and SQLite (as long as you are using new drivers mysql2, pg, sqlite3).
  * Exponential sleep times between retries (0, 1, 2, 4 seconds).
  * Logs every retry as a warning.
  * Intentionally does not retry nested transactions.
