@@ -16,7 +16,7 @@ Then run:
 
     bundle
 
-__With Rails it works out of the box__.
+__It works out of the box with Ruby on Rails__.
 
 If you have a standalone ActiveRecord-based project you'll need to call:
 
@@ -39,6 +39,10 @@ You can optionally configure transaction_retry gem in your config/initializers/t
  * Intentionally does not retry nested transactions.
  * Configurable number of retries and sleep time between them.
  * Use it in your Rails application or a standalone ActiveRecord-based project.
+
+## Testimonials
+
+This gem was initially developed for and successfully works in production at [Kontomierz.pl](http://kontomierz.pl) - the finest Polish personal finance app.
 
 ## Requirements
 
