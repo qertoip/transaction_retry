@@ -24,6 +24,24 @@ If you have a standalone ActiveRecord-based project you'll need to call:
 
 __after__ connecting to the database.
 
+## Database deadlock and serialization errors that are retried
+
+#### MySQL
+
+ * Deadlock found when trying to get lock
+ * Lock wait timeout exceeded
+
+#### PostgreSQL
+
+ * deadlock detected
+ * could not serialize access
+
+#### SQLite
+
+ * The database file is locked
+ * A table in the database is locked
+ * Database lock protocol error
+
 ## Configuration
 
 You can optionally configure transaction_retry gem in your config/initializers/transaction_retry.rb (or anywhere else):
