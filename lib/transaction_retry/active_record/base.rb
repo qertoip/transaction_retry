@@ -40,6 +40,13 @@ module TransactionRetry
           # An ugly tr_ prefix is used to minimize the risk of method clash in the future.
           def tr_exponential_pause( count )
             seconds = TransactionRetry.wait_times[count-1] || 32
+
+            if TransactionRetry.fuzz
+              fuzz_factor = [seconds * 0.25, 1].max
+
+              seconds += rand * (fuzz_factor * 2) - fuzz_factor
+            end
+
             sleep( seconds ) if seconds > 0
           end
         
