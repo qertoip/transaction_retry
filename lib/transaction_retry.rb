@@ -38,4 +38,12 @@ module TransactionRetry
     @@wait_times = array_of_seconds
   end
 
+  def self.fuzz
+    @@fuzz ||= true
+  end
+
+  def self.fuzz=( val )
+    @@fuzz = val
+  end
+
 end
