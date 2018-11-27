@@ -30,7 +30,7 @@ module TransactionRetry
 
           begin
             transaction_without_retry(*objects, &block)
-          rescue *[::ActiveRecord::TransactionIsolationConflict, *retry_on]
+          rescue *[::ActiveRecord::Deadlocked, *retry_on]
             raise if retry_count >= max_retries
             raise if tr_in_nested_transaction?
             
@@ -38,7 +38,7 @@ module TransactionRetry
             postfix = { 1 => 'st', 2 => 'nd', 3 => 'rd' }[retry_count] || 'th'
 
             type_s = case $!
-            when ::ActiveRecord::TransactionIsolationConflict
+            when ::ActiveRecord::Deadlocked
               "Transaction isolation conflict"
             else
               $!.class.name

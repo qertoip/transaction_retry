@@ -41,7 +41,7 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
       if first_run
         first_run = false
         message = "Deadlock found when trying to get lock"
-        raise ActiveRecord::TransactionIsolationConflict.new( ActiveRecord::StatementInvalid.new( message ), message )
+        raise ActiveRecord::Deadlocked.new( ActiveRecord::StatementInvalid.new( message ) )
       end
       QueuedJob.create!( :job => 'is cool!' )
     end
@@ -86,11 +86,11 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
     TransactionRetry.max_retries = 1
     run = 0
 
-    assert_raises( ActiveRecord::TransactionIsolationConflict ) do
+    assert_raises( ActiveRecord::Deadlocked ) do
       ActiveRecord::Base.transaction do
         run += 1
         message = "Deadlock found when trying to get lock"
-        raise ActiveRecord::TransactionIsolationConflict.new( ActiveRecord::StatementInvalid.new( message ), message )
+        raise ActiveRecord::Deadlocked.new( ActiveRecord::StatementInvalid.new( message ) )
       end
     end
     
@@ -100,11 +100,11 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
 
     run = 0
 
-    assert_raises( ActiveRecord::TransactionIsolationConflict ) do
+    assert_raises( ActiveRecord::Deadlocked ) do
       ActiveRecord::Base.transaction(max_retries: 1) do
         run += 1
         message = "Deadlock found when trying to get lock"
-        raise ActiveRecord::TransactionIsolationConflict.new( ActiveRecord::StatementInvalid.new( message ), message )
+        raise ActiveRecord::Deadlocked.new( ActiveRecord::StatementInvalid.new( message ) )
       end
     end
     
@@ -116,12 +116,12 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
 
     ActiveRecord::Base.transaction do
 
-      assert_raises( ActiveRecord::TransactionIsolationConflict ) do
+      assert_raises( ActiveRecord::Deadlocked ) do
         ActiveRecord::Base.transaction( :requires_new => true ) do
           if first_try
             first_try = false
             message = "Deadlock found when trying to get lock"
-            raise ActiveRecord::TransactionIsolationConflict.new( ActiveRecord::StatementInvalid.new( message ), message )
+            raise ActiveRecord::Deadlocked.new( ActiveRecord::StatementInvalid.new( message ) )
           end
           QueuedJob.create!( :job => 'is cool!' )
         end

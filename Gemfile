@@ -5,7 +5,7 @@ gemspec
 
 group :test do
   # Use the gem instead of a dated version bundled with Ruby
-  gem 'minitest', '2.8.1'
+  gem 'minitest' #, '2.8.1'
   
   gem 'simplecov', :require => false
 
