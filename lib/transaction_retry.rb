@@ -1,6 +1,5 @@
 require "active_record"
 require "transaction_isolation"
-
 require_relative "transaction_retry/version"
 
 module TransactionRetry
@@ -20,6 +19,14 @@ module TransactionRetry
         TransactionRetry.apply_activerecord_patch
       end
     end
+  end
+
+  def self.retry_on=(error_classes)
+    @@retry_on = Array(error_classes)
+  end
+
+  def self.retry_on
+    @@retry_on ||= []
   end
 
   def self.max_retries
