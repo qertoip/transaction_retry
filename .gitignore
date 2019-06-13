@@ -4,3 +4,5 @@ Gemfile.lock
 pkg/*
 .idea
 test/log/*.log
+.ruby-gemset
+.ruby-version
