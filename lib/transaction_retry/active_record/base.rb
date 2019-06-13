@@ -27,25 +27,18 @@ module TransactionRetry
 
           retry_on = opts.delete(:retry_on) || TransactionRetry.retry_on
           max_retries = opts.delete(:max_retries) || TransactionRetry.max_retries
+          before_retry = opts.delete(:before_retry) || TransactionRetry.before_retry
 
           begin
             transaction_without_retry(*objects, &block)
-          rescue *[::ActiveRecord::TransactionIsolationConflict, *retry_on]
+          rescue *[::ActiveRecord::TransactionIsolationConflict, *retry_on] => e
             raise if retry_count >= max_retries
             raise if tr_in_nested_transaction?
 
             retry_count += 1
-            postfix = { 1 => 'st', 2 => 'nd', 3 => 'rd' }[retry_count] || 'th'
-
-            type_s = case $!
-            when ::ActiveRecord::TransactionIsolationConflict
-              "Transaction isolation conflict"
-            else
-              $!.class.name
-            end
-
-            logger.warn "#{type_s} detected. Retrying for the #{retry_count}-#{postfix} time..." if logger
-            tr_exponential_pause( retry_count )
+            logger.warn "#{e.class.name} detected. Retry num #{retry_count}..." if logger
+            before_retry.call(retry_count, e) if before_retry
+            tr_exponential_pause(retry_count)
             retry
           end
         end

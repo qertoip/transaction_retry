@@ -21,6 +21,14 @@ module TransactionRetry
     end
   end
 
+  def self.before_retry=(lambda_block)
+    @@before_retry = lambda_block
+  end
+
+  def self.before_retry
+    @@before_retry ||= nil
+  end
+
   def self.retry_on=(error_classes)
     @@retry_on = Array(error_classes)
   end
