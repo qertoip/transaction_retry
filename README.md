@@ -69,7 +69,7 @@ This gem was initially developed for and successfully works in production at [Ko
 ## Requirements
 
  * ruby 2.6.2+
- * activerecord 5.2+
+ * activerecord 5.1+
 
 ## Running tests
 
