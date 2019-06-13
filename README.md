@@ -64,8 +64,8 @@ This gem was initially developed for and successfully works in production at [Ko
 
 ## Requirements
 
- * ruby 1.9.2
- * activerecord 3.0.11+
+ * ruby 2.6.2+
+ * activerecord 5.2+
 
 ## Running tests
 
