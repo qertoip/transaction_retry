@@ -2,6 +2,8 @@
 
 Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL, and SQLite.
 
+This is a forked project from [transaction_retry](https://github.com/qertoip/transaction_retry)
+
 ## Example
 
 The gem works automatically by rescuing ActiveRecord::TransactionIsolationConflict and retrying the transaction.
@@ -10,7 +12,7 @@ The gem works automatically by rescuing ActiveRecord::TransactionIsolationConfli
 
 Add this to your Gemfile:
 
-    gem 'transaction_retry'
+    gem 'transaction_retry', git: 'https://github.com/optimalworkshop/transaction_retry.git'
 
 Then run:
 
@@ -64,22 +66,20 @@ This gem was initially developed for and successfully works in production at [Ko
 
 ## Requirements
 
- * ruby 1.9.2
- * activerecord 3.0.11+
+ * ruby 2.2.2+
+ * activerecord 5.1+
 
 ## Running tests
 
 Run tests on the selected database (mysql2 by default):
 
-    db=mysql2 bundle exec rake test
-    db=postgresql bundle exec rake test
+    db=mysql2 DB_USERNAME=<db user> DB_PASSWORD=<db password> bundle exec rake test
+    db=postgresql DB_USERNAME=<db user> DB_PASSWORD=<db password> bundle exec rake test
     db=sqlite3 bundle exec rake test
 
 Run tests on all supported databases:
 
     ./tests
-
-Database configuration is hardcoded in test/db/db.rb; feel free to improve this and submit a pull request.
 
 ## How intrusive is this gem?
 
