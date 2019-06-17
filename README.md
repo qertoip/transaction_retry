@@ -2,6 +2,8 @@
 
 Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL, and SQLite.
 
+This is a forked project from [transaction_retry](https://github.com/qertoip/transaction_retry)
+
 ## Example
 
 The gem works automatically by rescuing ActiveRecord::TransactionIsolationConflict and retrying the transaction.
@@ -10,7 +12,7 @@ The gem works automatically by rescuing ActiveRecord::TransactionIsolationConfli
 
 Add this to your Gemfile:
 
-    gem 'transaction_retry'
+    gem 'transaction_retry', git: 'https://github.com/optimalworkshop/transaction_retry.git'
 
 Then run:
 
