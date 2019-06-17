@@ -71,15 +71,13 @@ This gem was initially developed for and successfully works in production at [Ko
 
 Run tests on the selected database (mysql2 by default):
 
-    db=mysql2 bundle exec rake test
-    db=postgresql bundle exec rake test
+    db=mysql2 DB_USERNAME=<db user> DB_PASSWORD=<db password> bundle exec rake test
+    db=postgresql DB_USERNAME=<db user> DB_PASSWORD=<db password> bundle exec rake test
     db=sqlite3 bundle exec rake test
 
 Run tests on all supported databases:
 
     ./tests
-
-Database configuration is hardcoded in test/db/db.rb; feel free to improve this and submit a pull request.
 
 ## How intrusive is this gem?
 
