@@ -53,7 +53,7 @@ You can optionally configure transaction_retry gem in your config/initializers/t
     TransactionRetry.retry_on = CustomErrorClass # To add another error class to retry on (ActiveRecord::TransactionIsolationConflict always included)
   or
     TransactionRetry.retry_on = [<custom error classes>]
-
+    TransactionRetry.before_retry = ->(retry_num, error) { ... }
 
 ## Features
 
@@ -62,6 +62,7 @@ You can optionally configure transaction_retry gem in your config/initializers/t
  * Logs every retry as a warning.
  * Intentionally does not retry nested transactions.
  * Configurable number of retries and sleep time between them.
+ * Configure a custom hook to run before every retry.
  * Use it in your Rails application or a standalone ActiveRecord-based project.
 
 ## Testimonials

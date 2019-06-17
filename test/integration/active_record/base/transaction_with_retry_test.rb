@@ -10,12 +10,14 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
     @original_max_retries = TransactionRetry.max_retries
     @original_wait_times = TransactionRetry.wait_times
     @original_retry_on = TransactionRetry.retry_on
+    @original_before_retry = TransactionRetry.before_retry
   end
 
   def teardown
     TransactionRetry.max_retries = @original_max_retries
     TransactionRetry.wait_times = @original_wait_times
     TransactionRetry.retry_on = @original_retry_on
+    TransactionRetry.before_retry = @original_before_retry
     QueuedJob.delete_all
   end
 
@@ -160,5 +162,53 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
     end
 
     assert_equal( 0, QueuedJob.count )
+  end
+
+  def test_run_custom_lambda_before_retry
+    code_run = false
+    retry_id = nil
+    error_instance = nil
+    first_try = true
+    lambda_code = ->(retry_num, error) do
+      code_run = true
+      retry_id = retry_num
+      error_instance =  error
+    end
+
+    ActiveRecord::Base.transaction(before_retry: lambda_code) do
+      if first_try
+        first_try = false
+        raise ActiveRecord::TransactionIsolationConflict.new
+      end
+      QueuedJob.create!( :job => 'is cool!' )
+    end
+    assert_equal 1, QueuedJob.count
+    assert code_run
+    assert_equal 1, retry_id
+    assert_equal ActiveRecord::TransactionIsolationConflict, error_instance.class
+  end
+
+  def test_run_custom_global_lambda_before_retry
+    code_run = false
+    retry_id = nil
+    error_instance = nil
+    TransactionRetry.before_retry = ->(retry_num, error) do
+      code_run = true
+      retry_id = retry_num
+      error_instance =  error
+    end
+    first_try = true
+
+    ActiveRecord::Base.transaction do
+      if first_try
+        first_try = false
+        raise ActiveRecord::TransactionIsolationConflict.new
+      end
+      QueuedJob.create!( :job => 'is cool!' )
+    end
+    assert_equal 1, QueuedJob.count
+    assert code_run
+    assert_equal 1, retry_id
+    assert_equal ActiveRecord::TransactionIsolationConflict, error_instance.class
   end
 end
