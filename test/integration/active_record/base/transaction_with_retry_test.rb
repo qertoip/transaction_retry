@@ -9,11 +9,13 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
   def setup
     @original_max_retries = TransactionRetry.max_retries
     @original_wait_times = TransactionRetry.wait_times
+    @original_retry_on = TransactionRetry.retry_on
   end
 
   def teardown
     TransactionRetry.max_retries = @original_max_retries
     TransactionRetry.wait_times = @original_wait_times
+    TransactionRetry.retry_on = @original_retry_on
     QueuedJob.delete_all
   end
 
@@ -68,7 +70,6 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
 
   def test_retries_on_custom_error
     first_run = true
-
     ActiveRecord::Base.transaction(retry_on: CustomError) do
       if first_run
         first_run = false
@@ -78,7 +79,36 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
       QueuedJob.create!( :job => 'is cool!' )
     end
     assert_equal( 1, QueuedJob.count )
+    QueuedJob.first.destroy
+  end
 
+  def test_retries_on_configured_retry_on
+    TransactionRetry.retry_on = CustomError
+    first_run = true
+    ActiveRecord::Base.transaction do
+      if first_run
+        first_run = false
+        message = "Deadlock found when trying to get lock"
+        raise CustomError, "random error"
+      end
+      QueuedJob.create!( :job => 'is cool!' )
+    end
+    assert_equal( 1, QueuedJob.count )
+    QueuedJob.first.destroy
+  end
+
+  def test_retries_transaction_on_transaction_isolation_when_retry_on_set
+    TransactionRetry.retry_on = CustomError
+    first_run = true
+    ActiveRecord::Base.transaction do
+      if first_run
+        first_run = false
+        message = "Deadlock found when trying to get lock"
+        raise ActiveRecord::TransactionIsolationConflict.new(message)
+      end
+      QueuedJob.create!( :job => 'is cool!' )
+    end
+    assert_equal( 1, QueuedJob.count )
     QueuedJob.first.destroy
   end
 

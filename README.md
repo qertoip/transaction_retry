@@ -50,6 +50,10 @@ You can optionally configure transaction_retry gem in your config/initializers/t
 
     TransactionRetry.max_retries = 3
     TransactionRetry.wait_times = [0, 1, 2, 4, 8, 16, 32]   # seconds to sleep after retry n
+    TransactionRetry.retry_on = CustomErrorClass # To add another error class to retry on (ActiveRecord::TransactionIsolationConflict always included)
+  or
+    TransactionRetry.retry_on = [<custom error classes>]
+
 
 ## Features
 
