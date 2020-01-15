@@ -11,3 +11,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+            - bundle install --path vendor/bundle
+            - db=sqlite3 bundle exec rake test
