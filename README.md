@@ -46,8 +46,12 @@ __after__ connecting to the database.
 
 You can optionally configure transaction_retry gem in your config/initializers/transaction_retry.rb (or anywhere else):
 
+```
     TransactionRetry.max_retries = 3
     TransactionRetry.wait_times = [0, 1, 2, 4, 8, 16, 32]   # seconds to sleep after retry n
+    TransactionRetry.retry_on = CustomErrorClass # or an array of classes is valid too (ActiveRecord::TransactionIsolationConflict is by default always included)
+    TransactionRetry.before_retry = ->(retry_num, error) { ... }
+```
 
 ## Features
 
@@ -56,6 +60,7 @@ You can optionally configure transaction_retry gem in your config/initializers/t
  * Logs every retry as a warning.
  * Intentionally does not retry nested transactions.
  * Configurable number of retries and sleep time between them.
+ * Configure a custom hook to run before every retry.
  * Use it in your Rails application or a standalone ActiveRecord-based project.
 
 ## Testimonials
@@ -64,7 +69,7 @@ This gem was initially developed for and successfully works in production at [Ko
 
 ## Requirements
 
- * ruby 1.9.2
+ * ruby 2.2.2+
  * activerecord 3.0.11+
 
 ## Running tests

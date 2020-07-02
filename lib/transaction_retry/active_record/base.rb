@@ -13,9 +13,9 @@ module TransactionRetry
           end
         end
       end
-      
+
       module ClassMethods
-        
+
         def transaction_with_retry(*objects, &block)
           retry_count = 0
 
@@ -25,31 +25,26 @@ module TransactionRetry
             {}
           end
 
-          retry_on = opts.delete(:retry_on)
+          retry_on = opts.delete(:retry_on) || TransactionRetry.retry_on
           max_retries = opts.delete(:max_retries) || TransactionRetry.max_retries
+          before_retry = opts.delete(:before_retry) || TransactionRetry.before_retry
 
           begin
             transaction_without_retry(*objects, &block)
-          rescue *[::ActiveRecord::TransactionIsolationConflict, *retry_on]
+          rescue *[::ActiveRecord::TransactionIsolationConflict, *retry_on] => e
             raise if retry_count >= max_retries
             raise if tr_in_nested_transaction?
-            
+
             retry_count += 1
             postfix = { 1 => 'st', 2 => 'nd', 3 => 'rd' }[retry_count] || 'th'
-
-            type_s = case $!
-            when ::ActiveRecord::TransactionIsolationConflict
-              "Transaction isolation conflict"
-            else
-              $!.class.name
-            end
-
-            logger.warn "#{type_s} detected. Retrying for the #{retry_count}-#{postfix} time..." if logger
-            tr_exponential_pause( retry_count )
+            logger.warn "#{e.class.name} detected. Retrying for the #{retry_count}-#{postfix} time..." if logger
+            
+            before_retry.call(retry_count, e) if before_retry
+            tr_exponential_pause(retry_count)
             retry
           end
         end
-        
+
         private
 
           # Sleep 0, 1, 2, 4, ... seconds up to the TransactionRetry.max_retries.
@@ -66,7 +61,7 @@ module TransactionRetry
 
             sleep( seconds ) if seconds > 0
           end
-        
+
           # Returns true if we are in the nested transaction (the one with :requires_new => true).
           # Returns false otherwise.
           # An ugly tr_ prefix is used to minimize the risk of method clash in the future.
