@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.summary     = %q{Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL and SQLite.}
   s.description = %q{Retries database transaction on deadlock and transaction serialization errors. Supports MySQL, PostgreSQL and SQLite (as long as you are using new drivers mysql2, pg, sqlite3).}
   s.required_ruby_version = '>= 1.9.2'
+  s.license     = "MIT"
   
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
