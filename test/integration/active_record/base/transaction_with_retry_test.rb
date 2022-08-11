@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class TransactionWithRetryTest < MiniTest::Unit::TestCase
+class TransactionWithRetryTest < MiniTest::Test
   class CustomError < StandardError
   end
 
@@ -57,7 +57,6 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
       ActiveRecord::Base.transaction do
         if first_run
           first_run = false
-          message = "Deadlock found when trying to get lock"
           raise CustomError, "random error"
         end
         QueuedJob.create!( :job => 'is cool!' )
@@ -72,7 +71,6 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
     ActiveRecord::Base.transaction(retry_on: CustomError) do
       if first_run
         first_run = false
-        message = "Deadlock found when trying to get lock"
         raise CustomError, "random error"
       end
       QueuedJob.create!( :job => 'is cool!' )
@@ -115,13 +113,11 @@ class TransactionWithRetryTest < MiniTest::Unit::TestCase
     first_try = true
 
     ActiveRecord::Base.transaction do
-
       assert_raises( ActiveRecord::Deadlocked ) do
-        ActiveRecord::Base.transaction( :requires_new => true ) do
+        ActiveRecord::Base.transaction do
           if first_try
             first_try = false
-            message = "Deadlock found when trying to get lock"
-            raise ActiveRecord::Deadlocked.new( ActiveRecord::StatementInvalid.new( message ) )
+            raise ActiveRecord::Deadlocked.new
           end
           QueuedJob.create!( :job => 'is cool!' )
         end

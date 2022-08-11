@@ -8,7 +8,7 @@ module TransactionRetry
         ::ActiveRecord::Base.establish_connection(
           :adapter => "mysql2",
           :database => "transaction_retry_test",
-          :user => 'root',
+          :username => 'root',
           :password => ''
         )
       end
